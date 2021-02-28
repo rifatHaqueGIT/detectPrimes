@@ -1,12 +1,15 @@
 # detects primes from a list of numbers on standard input
 
+This is a skeleton code for an assignment in CPSC457.
+
+The program takes a single argument - number of threads that should be used
+to speed up the computation.
+
 * reads in a positive integers in range (2 .. 2^63-1) from standard input
 * for each number on input:
   * if the number is not prime, it is ignored
   * if the number is prime, it is printed to standard output
 
-The program takes a single argument - number of threads to use to speed up the
-computation.
 
 compile with:
 ```sh
