@@ -1,14 +1,14 @@
-SOURCES = main.cpp sumFactors.cpp
+SOURCES = main.cpp detectPrimes.cpp
 CPPC = g++
 CPPFLAGS = -c -Wall -O2
 LDLIBS = -pthread -lm
 OBJECTS = $(SOURCES:.cpp=.o)
-TARGET = sumFactors
+TARGET = detectPrimes
 
 all: $(TARGET)
 
-sumFactors.o: sumFactors.h
-main.o: sumFactors.h
+sumFactors.o: detectPrimes.h
+main.o: detectPrimes.h
 %.o : %.c
 $(OBJECTS): Makefile 
 

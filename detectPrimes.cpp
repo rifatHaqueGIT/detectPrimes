@@ -9,10 +9,11 @@
 
 // returns true if n is prime, otherwise returns false
 // -----------------------------------------------------------------------------
-// you may need to modify this function, or write your own equivalent
-// in order to parallelize this test
+// to get full credit for this assignment, you will need to adjust or even
+// re-write the code in this function to make it multithreaded.
 static bool is_prime(int64_t n)
 {
+  // handle trivial cases
   if (n < 2) return false;
   if (n <= 3) return true; // 2 and 3 are primes
   if (n % 2 == 0) return false; // handle multiples of 2
@@ -29,10 +30,15 @@ static bool is_prime(int64_t n)
   return true;
 }
 
-// this funciton tests all numbers in mums[] and returns a new vector containing
-// only those numbers that are primes
+// This function takes a list of numbers in nums[] and returns only numbers that
+// are primes.
+//
+// The parameter n_threads indicates how many threads should be created to speed
+// up the computation.
 // -----------------------------------------------------------------------------
-// you will most likely need to re-implement this function entirely
+// You will most likely need to re-implement this function entirely.
+// Note that the current implementation ignores n_threads. Your multithreaded
+// implementation must use this parameter.
 std::vector<int64_t>
 detect_primes(const std::vector<int64_t> & nums, int n_threads)
 {
